@@ -179,10 +179,13 @@ class _MiniplayerState extends State<Miniplayer> with TickerProviderStateMixin {
                   child: Opacity(
                     opacity: borderDouble(
                         minRange: 0.0, maxRange: 1.0, value: _percentage),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: widget.backgroundColor,
-                        borderRadius: BorderRadius.circular(10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: widget.backgroundColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                   ),
